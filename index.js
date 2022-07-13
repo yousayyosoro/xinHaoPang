@@ -42,6 +42,7 @@ app.get("/api/count", async (req, res) => {
   });
 });
 
+
 // 小程序调用，获取微信 Open ID
 app.get("/api/wx_openid", async (req, res) => {
   if (req.headers["x-wx-source"]) {
@@ -55,6 +56,7 @@ async function bootstrap() {
   await initDB();
   app.listen(port, () => {
     console.log("启动成功", port);
+    console.log(Counter);
   });
 }
 
